@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" style="background-color: transparent;">
+    <!-- Definitions for markers -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444" />
+        </marker>
+    </defs>
+
+    <!-- Ground/Water Line -->
+    <line x1="50" y1="380" x2="750" y2="380" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="10,5" />
+
+    <!-- Towers (Left and Right) -->
+    <!-- Left Tower -->
+    <rect x="150" y="50" width="40" height="330" fill="none" stroke="#334155" stroke-width="3" />
+    <!-- Right Tower -->
+    <rect x="610" y="50" width="40" height="330" fill="none" stroke="#334155" stroke-width="3" />
+
+    <!-- Bridge Deck -->
+    <rect x="100" y="280" width="600" height="20" fill="#e2e8f0" stroke="#334155" stroke-width="2" />
+
+    <!-- Main Cable (Parabolic shape) -->
+    <!-- Control point roughly at bottom center -->
+    <path d="M 170 50 Q 400 350 630 50" fill="none" stroke="#334155" stroke-width="4" />
+
+    <!-- Vertical Suspenders -->
+    <g stroke="#94a3b8" stroke-width="1.5">
+        <!-- Lines from cable to deck at regular intervals -->
+        <line x1="200" y1="280" x2="200" y2="155" />
+        <line x1="250" y1="280" x2="250" y2="205" />
+        <line x1="300" y1="280" x2="300" y2="245" />
+        <line x1="350" y1="280" x2="350" y2="265" />
+        <line x1="450" y1="280" x2="450" y2="265" />
+        <line x1="500" y1="280" x2="500" y2="245" />
+        <line x1="550" y1="280" x2="550" y2="205" />
+        <line x1="600" y1="280" x2="600" y2="155" />
+    </g>
+
+    <!-- Distributed Load (Red Arrows) -->
+    <g id="distributed-load">
+        <line x1="210" y1="250" x2="210" y2="275" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowhead)" />
+        <line x1="260" y1="250" x2="260" y2="275" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowhead)" />
+        <line x1="310" y1="250" x2="310" y2="275" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowhead)" />
+        <line x1="360" y1="250" x2="360" y2="275" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowhead)" />
+        <line x1="410" y1="250" x2="410" y2="275" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowhead)" />
+        <line x1="460" y1="250" x2="460" y2="275" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowhead)" />
+        <line x1="510" y1="250" x2="510" y2="275" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowhead)" />
+        <line x1="560" y1="250" x2="560" y2="275" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowhead)" />
+    </g>
+    <text x="350" y="240" font-family="sans-serif" font-size="12" fill="#ef4444">Distributed Load</text>
+
+    <!-- Live Load (Car Icon) -->
+    <g transform="translate(380, 260)">
+        <!-- Car Body -->
+        <path d="M 0 10 L 5 0 L 25 0 L 30 10 L 40 10 L 40 20 L -10 20 L -10 10 Z" fill="#3b82f6" stroke="#1e40af" stroke-width="1" />
+        <!-- Wheels -->
+        <circle cx="5" cy="20" r="4" fill="#333" />
+        <circle cx="25" cy="20" r="4" fill="#333" />
+        <!-- Label arrow -->
+        <line x1="15" y1="-10" x2="15" y2="-2" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrowhead)" />
+    </g>
+    <text x="380" y="240" font-family="sans-serif" font-size="12" fill="#3b82f6">Live Load</text>
+
+    <!-- Labels for Structure -->
+    <text x="145" y="40" font-family="sans-serif" font-size="14" fill="#334155" text-anchor="end">Tower</text>
+    <text x="655" y="40" font-family="sans-serif" font-size="14" fill="#334155" text-anchor="start">Tower</text>
+    <text x="500" y="100" font-family="sans-serif" font-size="14" fill="#334155">Main Cable</text>
+    <text x="100" y="310" font-family="sans-serif" font-size="14" fill="#334155">Deck</text>
+
+</svg>
